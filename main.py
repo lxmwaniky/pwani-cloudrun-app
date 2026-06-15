@@ -4,8 +4,6 @@ from fastapi import FastAPI
 
 app = FastAPI(title="Cloud Study Jams Pwani")
 
-
-
 @app.get("/")
 def read_root():
     return {
