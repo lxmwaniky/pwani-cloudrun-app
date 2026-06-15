@@ -1,0 +1,15 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment directories
+.venv/
+env/
+venv/
+
+# uv specific locks/caches (optional, but keep cache out)
+.uv/
+
+# OS specific files
+.DS_Store
