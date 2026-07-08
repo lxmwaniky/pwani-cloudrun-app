@@ -70,3 +70,7 @@ def trigger_400():
 @app.get("/500")
 def trigger_500():
     raise HTTPException(status_code=500, detail="Demo Internal Server Error (500 Error)")
+
+@app.get("/love")
+def loved():
+    return {"message": "You are loved"}
