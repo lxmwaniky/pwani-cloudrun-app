@@ -50,7 +50,6 @@ async def log_requests(request: Request, call_next):
 def read_root():
     return {
         "message": "Welcome to Cloud Run",
-        "name": "Alex Nyambura"
     }
 
 @app.get("/health")
@@ -64,10 +63,10 @@ def get_info():
         "timestamp": datetime.datetime.now().isoformat()
     }
 
-@app.get("/demo-400")
+@app.get("/400")
 def trigger_400():
     raise HTTPException(status_code=400, detail="Demo Bad Request (400 Error)")
 
-@app.get("/demo-500")
+@app.get("/500")
 def trigger_500():
     raise HTTPException(status_code=500, detail="Demo Internal Server Error (500 Error)")
